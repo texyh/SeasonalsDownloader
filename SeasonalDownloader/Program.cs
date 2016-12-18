@@ -38,6 +38,7 @@ namespace SeasonalDownloader
                     if (!File.Exists(fullFilePath))
                     {
                         downloadLink.Click();
+						webDriver.Navigate().Back();
                     }
                     else
                     {
@@ -45,7 +46,8 @@ namespace SeasonalDownloader
                     }
                 }
             }
-            webDriver.Close();
+			webDriver.Close();
+			Console.WriteLine("Done.");
         }
     }
 }
